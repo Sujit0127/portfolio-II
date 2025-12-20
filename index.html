@@ -19,6 +19,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
+<script>
+    document.querySelectorAll('.project__slider').forEach(slider => {
+        const images = slider.querySelectorAll('img');
+        let index = 0;
+
+        if (images.length <= 1) return;
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }, 3000); // 3 seconds per slide
+    });
+</script>
 
 <body>
     <!--==================== HEADER ====================-->
@@ -42,7 +55,7 @@
                         <a href="#skills" class="nav__link">
                             <i class="uil uil-file-alt nav__icon"></i>Skills
                         </a>
-                    </li>
+                    
                      <li class="nav__item">
                         <a href="#qualification" class="nav__link">
                             <i class="uil uil-file-alt nav__icon"></i> Qualification
@@ -56,6 +69,12 @@
                     <li class="nav__item">
                         <a href="#portfolio" class="nav__link">
                             <i class="uil uil-scenery nav__icon"></i> Portfolio
+                        </a>
+                    </li>
+                    </li>
+                      <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> Project's
                         </a>
                     </li>
                     <li class="nav__item">
@@ -172,7 +191,7 @@
 
                     <div class="about__buttons">
                         <a download=""
-                            href="https://drive.google.com/file/d/1jQ3-AQtCg6KutgJ3B97jXa8WZC_t5Icc/view?usp=drive_link"
+                            href="Img/CV/MT2022169_CV_1225.pdf"
                             class="button button--flex">
                             Download CV<i class="uil uil-download-alt button__icon"></i>
                         </a>
@@ -294,6 +313,7 @@
           </div>
       </div>
   </section>
+  
         <!--==================== QUALIFICATION ====================-->
          <section class="qualification section" id="qualification">
             <h2 class="section__title">Qualification</h2>
@@ -733,6 +753,112 @@
             </div>
         </section>
 
+
+        <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Professional Work</span>
+
+            <div class="projects__container container grid">
+
+                <!-- Project Card 1 -->
+                <div class="project__card">
+                    <div class="project__img-wrapper">
+                         <div class="project__slider">
+                            <img src="img/ch10/ch10.PNG" alt="Project 1">
+                        </div>
+                    </div>
+
+                    <div class="project__content">
+                        <h3 class="project__title">Ethernet Data Forwarding Application</h3>
+                        <p class="project__description">
+                            This application receives CH10 throughput-mode and packed-mode data over Ethernet, 
+                            processes the incoming data stream, and forwards the data in one-to-one minor frame format to another IP address.
+                        </p>
+
+                        <div class="project__buttons">
+                            <a href="#" class="project__button project__button-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project__card">
+                    <div class="project__img-wrapper">
+                        <div class="project__slider slide-2">
+                            <img src="img/appjar/appjar_app.png" alt="">
+                            <img src="img/appjar/appjar_app1.png" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="project__content">
+                        <h3 class="project__title">Data Plotting Application</h3>
+                        <p class="project__description">
+                            This Python application, built using appJar, is designed to plot telemetry data from files (TXT, XLSX).
+                             The app provides an intuitive graphical user interface (GUI) for selecting X and Y axes for the plot, 
+                             applying various trace modes (Lines, Markers, Lines+Markers), and generating plots with Plotly.
+                        </p>
+
+                        <div class="project__buttons">
+                            <a href="https://github.com/Sujit0127/Data-Plotter-App-I" class="project__button project__button-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project__card">
+                    <div class="project__img-wrapper">
+                        <div class="project__slider slide-4">
+                            <img src="img/mat_ploter/1.PNG" alt="">
+                            <img src="img/mat_ploter/2.PNG" alt="">
+                            <img src="img/mat_ploter/3.PNG" alt="">
+                            <img src="img/mat_ploter/4.PNG" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="project__content">
+                        <h3 class="project__title">Data Plotting Application</h3>
+                        <p class="project__description">
+                            This PyQt5-based desktop application serves as a data plotting and visualization tool.
+                            It features a graphical user interface (GUI) for selecting and executing various plotting applications. 
+                            The application is tailored to handle one-file and two-file plotting, as well as exporting plots and images to PDF.
+                        </p>
+
+                        <div class="project__buttons">
+                            <a href="https://github.com/Sujit0127/Data-Plotter-App-II" class="project__button project__button-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project__card">
+                    <div class="project__img-wrapper">
+                        <div class="project__slider slide-3">
+                            <img src="img/reciver/recv01.PNG" alt="">
+                            <img src="img/reciver/recv02.PNG" alt="">
+                            <img src="img/reciver/recv03.PNG" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="project__content">
+                        <h3 class="project__title">Receiver Application</h3>
+                        <p class="project__description">
+                            application for configuring RF and frame synchronization parameters, receiving real-time spectrum,
+                            RF levels, AGC, and related data from the board, and communicating with the embedded system over Ethernet (UDP).
+                        </p>
+
+                        <div class="project__buttons">
+                            <a href="#" class="project__button project__button-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!--==================== PROJECT IN MIND ====================-->
         <section class="project section">
             <div class="project__bg">
@@ -792,21 +918,21 @@
                     </div>
                 </div>
 
-                <form action="New Text Document.txt" id="GFG" method="POST" class="contact__form grid">
+                <form action="aa.html" id="GFG" method="POST" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="name" class="contact__label">Name</label>
-                            <input type="text" class="contact__input" name="name">
+                            <input type="text" class="contact__input" name="name" required>
                         </div>
 
                         <div class="contact__content">
                             <label for="email" class="contact__label">Email</label>
-                            <input type="email" class="contact__input" name="email">
+                            <input type="email" class="contact__input" name="email" required>
                         </div>
 
                         <div class="contact__content">
                             <label for="phone" class="contact__label">Phone</label>
-                            <input type="number" class="contact__input" maxlength="14" name="phone">
+                            <input type="tel" class="contact__input" maxlength="14" name="phone">
                         </div>
 
                         <div class="contact__content">
@@ -816,17 +942,18 @@
 
                         <div class="contact__content">
                             <label for="message" class="contact__label">Message</label>
-                            <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <textarea name="message" cols="0" rows="7" class="contact__input" required></textarea>
                         </div>
 
                         <div>
-                            <a href="aleart.html" type="submit" id="submit" class="button button--flex">
+                            <button type="submit" class="button button--flex">
                                 Send Message
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </form>
+
             </div>
         </section>
     </main>
@@ -843,7 +970,7 @@
                 </a>
             </div>
             <div>
-                <a href="https://github.com/Sujit00127" target="_blank" title="GitHub">
+                <a href="https://github.com/Sujit0127" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
                     GitHub
                 </a>
@@ -895,14 +1022,19 @@
     <!--==================== MAIN JS ====================-->
     <script src="JS/main.js"></script>
 
-    <!--Form Connection-->
-    <script>
-        let submitbutton = document.getElementById("submit");
-        submitbutton.addEventListener("click", function () {
-            document.getElementById("GFG").submit();
-        })
+    <!-- Form Connection -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById("GFG");
+    const submitButton = document.getElementById("submit");
 
-    </script>
+    submitButton?.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        if (form) form.submit();
+    });
+});
+</script>
+
 </body>
 
 </html>
