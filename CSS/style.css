@@ -1371,3 +1371,163 @@ footer .footer-credit {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* ================= PROJECTS ================= */
+
+.projects__container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.project__card {
+    background-color: var(--container-color);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+body.dark-theme .project__card {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.project__card:hover {
+    transform: translateY(-10px);
+}
+
+/* Content */
+.project__content {
+    padding: 1.5rem;
+}
+
+.project__title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+}
+
+.project__description {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Buttons */
+.project__buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.project__button {
+    padding: 0.45rem 1.1rem;
+    background-color: var(--first-color);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project__button:hover {
+    background-color: var(--first-color-alt);
+    transform: translateY(-2px);
+}
+
+.project__button-outline {
+    background: transparent;
+    border: 1px solid var(--first-color);
+    color: var(--first-color);
+}
+
+.project__button-outline:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects__container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.project__card {
+    background-color: var(--container-color);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+body.dark-theme .project__card {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.project__card:hover {
+    transform: translateY(-10px);
+}
+
+/* ===== Project Image Slider ===== */
+.project__img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: var(--container-color);
+}
+
+.project__slider {
+    display: flex;
+    height: 100%;
+}
+
+.project__slider img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ===== 2 IMAGES ===== */
+.slide-2 {
+    width: 100%;
+    animation: slide2 8s infinite ease-in-out;
+}
+
+@keyframes slide2 {
+    0%, 45% { transform: translateX(0); }
+    50%, 100% { transform: translateX(-100%); }
+}
+
+/* ===== 3 IMAGES ===== */
+.slide-3 {
+    width: 100%;
+    animation: slide3 12s infinite ease-in-out;
+}
+
+@keyframes slide3 {
+    0%, 30% { transform: translateX(0); }
+    35%, 60% { transform: translateX(-100%); }
+    65%, 100% { transform: translateX(-200%); }
+}
+
+/* ===== 4 IMAGES ===== */
+.slide-4 {
+    width: 100%;
+    animation: slide4 16s infinite ease-in-out;
+}
+
+@keyframes slide4 {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 100% { transform: translateX(-300%); }
+}
+
+
+
+
+
