@@ -19,19 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
-<script>
-    document.querySelectorAll('.project__slider').forEach(slider => {
-        const images = slider.querySelectorAll('img');
-        let index = 0;
-
-        if (images.length <= 1) return;
-
-        setInterval(() => {
-            index = (index + 1) % images.length;
-            slider.style.transform = `translateX(-${index * 100}%)`;
-        }, 3000); // 3 seconds per slide
-    });
-</script>
 
 <body>
     <!--==================== HEADER ====================-->
@@ -1038,5 +1025,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </body>
 
 </html>
+
 
 
